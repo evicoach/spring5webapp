@@ -18,6 +18,7 @@ public class Publisher {
     private String zip;
 
     @OneToMany
+    @JoinColumn(name = "publisher_id") // add this field to the book record
     private Set<Book> books = new HashSet<>();
 
     public Publisher() {
